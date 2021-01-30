@@ -22,6 +22,7 @@ func init() {
 // for each profile in the order they are specified
 func Load(target interface{}) error {
 	if profilesFlag == nil {
+		// should not happen, as init() is called by the runtime
 		panic("go_config.init() needs to called")
 	}
 
